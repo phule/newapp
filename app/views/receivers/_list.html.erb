@@ -1,0 +1,23 @@
+<% @receivers.each do |receiver| %>
+<div class="contentDiv">
+    <ul>
+        <li class="name" id="name<%= receiver.id %>"><span><%= receiver.name %></span></li>
+        <li class="emailHead" id="email<%= receiver.id %>"><%= receiver.email %></li>
+        <li class="edit">
+            	<div class="form">
+            		<input type="hidden" id="hid_name<%= receiver.id %>" value="<%= receiver.name %>">
+            		<input type="hidden" id="hid_email<%= receiver.id %>" value="<%= receiver.email %>">
+					<fieldset>
+					<div class="divEmail">
+						<input type="button" class="editEmail" onclick="editReceiver('<%= receiver.id.to_s %>','<%= receiver.name %>','<%= receiver.email%>')"/>
+					</div>
+					<div class="divRemove">
+						<%= link_to '', receiver, confirm: 'Are you sure?', method: :delete, class:"remove" %>
+					</div>
+					</fieldset>
+                </div>                            
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<% end %>

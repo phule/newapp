@@ -1,0 +1,138 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('input:checkbox:not([safari])').checkbox();
+		$('input[safari]:checkbox').checkbox({cls:'jquery-safari-checkbox'});
+		//$("#successMessage").fadeOut(8000);
+	});
+
+	displayForm = function (elementId)
+	{
+		var content = [];
+		$('#' + elementId + ' input').each(function(){
+			var el = $(this);
+			if ( (el.attr('type').toLowerCase() == 'radio'))
+			{
+				if ( this.checked )
+					content.push([
+						'"', el.attr('name'), '": ',
+						'value="', ( this.value ), '"',
+						( this.disabled ? ', disabled' : '' )
+					].join(''));
+			}
+			else
+				content.push([
+					'"', el.attr('name'), '": ',
+					( this.checked ? 'checked' : 'not checked' ), 
+					( this.disabled ? ', disabled' : '' )
+				].join(''));
+		});
+		alert(content.join('\n'));
+	}
+	
+	changeStyle = function(skin)
+	{
+		jQuery('#myform :checkbox').checkbox((skin ? {cls: skin} : {}));
+	}
+</script>
+<% if flash[:error] %>
+  <div id="error_explanation">
+  	<div class="alert alert-error">
+      The form contains 1 error.
+    </div>
+    <ul>
+      <li>* <%= flash[:error] %></li>
+    </ul>
+  </div>
+<% end %>
+<% if params[:suc]=="1" %>
+<div id="successMessage">
+	<img src="/assets/Icheck.png" alt="" style="position: relative;top: 5px;left: -3px;"/>
+	<span style="text-align: center;font-size: 22px;">Please check your email to finalize the registration process. You may need to check the Junk/Spam folder in case you can't find the email !</span>
+	<img onclick="hideSuccessMessage();" style="position: relative;right: -341px;top: -58px;" alt="" src="/assets/Idelete.png">
+</div>
+<% end %>
+<% if params[:error]=="1" %>
+	<div id="error_explanation">
+  	<div class="alert alert-error">
+      The form contains 1 error.
+    </div>
+    <ul>
+      <li>* Email is exists .</li>
+    </ul>
+  </div>
+<% end %>
+<div class='content'>
+	<div class="colRight">
+		<div class="video">
+	    	<%= image_tag("video.jpg", :size => "315x258", :alt => "")%>
+	    </div>
+	    <div class="afterSinging fLeft">
+	    	<h4>After Siging up:</h4>
+	        <ul>
+	        	<li><span>Recive an initial, anonymous </span></li>
+	            <li><span>Then every week, they’ll receive </span></li>
+	            <li><span>Benchmark your company  </span></li>
+	            <li><span>Identity trends before they  </span></li>
+	            <li><span>Receive continuous, anonymous </span></li>
+	            <li><span>Benchmark your company </span></li>
+	        </ul>
+	    </div>
+	</div>
+	<div class="register fLeft">
+		<div class="divSetup">
+	    	<div class="col100 fLeft">
+	    		<%= image_tag("iconpeple.png", :size => "56x55", :alt => "")%>
+	            <div>
+	            	<h5>Setup Account</h5>
+	                <p>Become member of TINYhr</p>
+	            </div>
+	        </div>
+	        <div class="col100 fLeft">
+	        	<%= image_tag("icon@.png", :size => "45x55", :alt => "")%>
+	            <div>
+	            	<h5>Enter Email</h5>
+	                <p>or Alias to be Monitored</p>
+	            </div>
+	        </div>
+	        <div class="col100Page fLeft">
+	        	<%= image_tag("iconpage.png", :size => "58x55", :alt => "")%>
+	            <div>
+	            	<h5>Receive Reports</h5>
+	                <p>Weely, Automated reports</p>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="clear"></div>
+	    <div class="divSignup">
+        	<div class="fieldsetTop"></div>
+            <div class="fieldsetContent">
+            	<div class="form">
+        	<form method="post" id="frmSignUp">
+            	<fieldset>
+                <p><input type="text" name="email" id="email" class="enterEmail" value="Enter Your Email to Sign Up Now!"onblur="if(this.value=='') this.value = this.defaultValue;" onfocus="if(this.value == this.defaultValue) this.value='';" /></p>
+                   <p>
+                    <input type="checkbox" name="action" safari=1 id="action" class="check"  name=""  value="" checked/>
+                    <label for="action">I have read and agree to the Terms of Use.</label>
+                  </p>
+                  <p>
+                    <input type="checkbox" name="comedy" id="comedy" value="" safari=1 onClick="jQuery('.check').attr('checked', !jQuery('.check').attr('checked') ? false : true)"/>
+                    <label for="comedy"> I’d like to recevie TINY pulse emails. </label>
+                </p>
+                <p><input type="button" value="" name="btnSignup" class="btnSignup" onclick="submitForm()"/></p>
+                </fieldset>
+            </form>
+            </div>
+            
+            </div>
+            <div class="fieldsetBottom"></div>
+        </div>
+	</div>
+</div>
+<script language="JavaScript">
+	function submitForm(){
+		$('#frmSignUp').submit();
+	}
+	function hideSuccessMessage(){
+		$("#successMessage").fadeOut();
+	} 
+</script>

@@ -1,0 +1,7 @@
+$('#showResultDetail').html('<%= escape_javascript(render @survey) %>');
+$('.hideDetail').hide();
+$('.diplayDetail').show();
+
+
+$('#showDetail<%=@survey.id %>').hide();
+$('#hideDetail<%=@survey.id %>').show();

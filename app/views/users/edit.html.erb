@@ -1,0 +1,26 @@
+<%= render 'shared/error_messages' %>
+<div class="contentSignup">
+	<div class="pageSignup">
+  <%= form_for(@user,:html=>{:name=>"frmEditUser"}) do |f| %>
+      	<fieldset>
+                <div class="styleLabel fLeft">
+                    <p><label for="first name">First Name</label></p>
+                    <p><label for="last name">Last Name</label></p>
+                    <p><label for="organization">Organization Name</label></p>
+                    <p><label for="email">Email</label></p>
+                    <p><label for="password">Password</label></p>
+                    <p><label for="repeat password">Repeat Password</label></p>
+                </div>
+                <div class="styleTextbox fLeft">
+                    <p><input id="user_first_name" class="styleInput" type="text" value="" size="30" name="user[first_name]"></p>
+                    <p><%= f.text_field :last_name, :class => "styleInput" %></p>
+                    <p><%= f.text_field :name, :class => "styleInput" %></p>
+                    <p><%= f.text_field :email, :class => "styleInput" %></p>
+                    <p><%= f.password_field :password, :class => "styleInput" %></p>
+                    <p><%= f.password_field :password_confirmation, :class => "styleInput" %></p>
+                    <p><%= f.submit "", class: "done" %></p>
+               </div>
+            </fieldset>
+    <% end %>
+  </div>
+</div>

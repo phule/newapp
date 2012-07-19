@@ -1,0 +1,43 @@
+<script language="JavaScript">
+function submitQuickForm(){
+	$('#frmQuickLog').submit();
+}
+</script>
+<div class="header">
+	<div class="headerTop">
+		<div class="logo">
+	        <a href="#" title="">
+	        	<%= image_tag("logo.jpg", :size => "164x44", :alt => "TINY Pulse")%>
+	        </a>
+	    </div>
+	    <div class="menu">
+	    	<p>
+	    	<%= link_to "HOME", root_path %>&nbsp;|&nbsp;
+	    	<%= link_to "ABOUT", about_path %>&nbsp;|&nbsp;
+	    	<%= link_to "VALUES", "#" %>&nbsp;|&nbsp;
+	    	<%= link_to "CONTACT", contact_path %>&nbsp;|&nbsp;
+	    	<%= link_to "TESTIMONIALS", "#" %>&nbsp;|&nbsp;
+	    	<%= link_to "BLOG", "#" %>&nbsp;|&nbsp;
+	    	<%= link_to "FAQ", "#" %>
+	        </p>
+	    </div>
+	    <div class="clear"></div>
+	    <div class="loginForm">
+	    	<form method="post" action="/quicksign" id="frmQuickLog">
+	        	<fieldset>
+	        		<div class="topLogin fLeft">
+                    	<input type="text" name="sign_name" id="sign_name" value="Username" class="username" onblur="if(this.value=='') this.value = this.defaultValue;" onfocus="if(this.value == this.defaultValue) this.value='';" />
+                    	<input type="password" name="sign_pass" id="sign_pass" value="**********" onblur="if(this.value=='') this.value = this.defaultValue;" onfocus="if(this.value == this.defaultValue) this.value='';" class="password" />
+                     </div>
+                     <div class="fLeft">
+                        <input type="button" value="" class="btnLogin" onclick="submitQuickForm();"/>
+                   	</div>
+	            </fieldset>
+	        </form>
+	    </div>
+	</div>
+	<div class="clear"></div>
+	<div class="headerBottom">
+		<h2>Company Slogan here</h2>
+	</div>
+</div>

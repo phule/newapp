@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Num question:</b>
+  <%= @survey.num_question %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @survey.date %>
+</p>
+
+<p>
+  <b>Responses:</b>
+  <%= @survey.responses %>
+</p>
+
+<p>
+  <b>Percent responses:</b>
+  <%= @survey.percent_responses %>
+</p>
+
+<p>
+  <b>Vs other companies:</b>
+  <%= @survey.vs_other_companies %>
+</p>
+
+<p>
+  <b>Add note:</b>
+  <%= @survey.add_note %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

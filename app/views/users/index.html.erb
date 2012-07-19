@@ -1,0 +1,36 @@
+<%= provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<table>
+	<tr>
+		<td>First Name</td>
+		<td>Last Name</td>
+		<td>Email</td>
+		<td>Ograzitation Name</td>
+		<td>Active</td>
+		<td>Action</td>
+	</tr>
+  <% @users.each do |user| %>
+    <tr>
+    	<td>
+      	<%= user.first_name %>
+    	</td>
+    	<td>
+      	<%= user.last_name %>
+    	</td>
+    	<td>
+      	<%= link_to user.email,user %>
+    	</td>
+    	<td>
+      	<%= user.name %>
+    	</td>
+    	<td>
+      	<%= user.active %>
+    	</td>
+    	<td>
+        	<%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  		</td>
+  	</tr>
+  <% end %>
+</table>

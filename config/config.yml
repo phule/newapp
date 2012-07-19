@@ -1,0 +1,4 @@
+development:
+  server_name: localhost:3000
+production: 
+  server_name: foo.com

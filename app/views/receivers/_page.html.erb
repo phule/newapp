@@ -1,0 +1,79 @@
+<% if @receiver.errors.any? %>
+    <div id="error_explanation">
+    	<div class="alert alert-error">
+    		<%= pluralize(@receiver.errors.count, "error") %> prohibited this receiver from being saved:
+		</div>
+      <ul>
+      <% @receiver.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
+<div class="dashboard">
+<%=  render 'shared/left_menu'%>
+ <div class="colRight729 fLeft">
+ 	<div class="userTop"></div><!-- end header-->
+    <div class="userContent">
+    	<h4>Welcome to TINY Pulse!<span> Please add your Subscribers email!</span></h4>
+        <div class="emalEnter">
+        	<%= render 'form', :locals => {:receiver => @receiver} %>
+        </div>
+        <div class="emailEnter1 borderBottom1" style="display: block">
+        	<!--<p>Invited successfully : <span>Dave (dave@vinasource) , Vu (vu@vinasource)</span></p>--> 
+        </div>
+        <% if @receivers && @receivers.count  >0 %>
+        <%= form_tag("/update_receiver", :controller => "receivers",:method => "post",:id=>"update_receiver") do %>
+		<div class="emalEnter1">
+			<div class="groupButton">
+				<fieldset>
+			    <div>
+			    	<%= link_to '','/list',{:remote => true,:class=>'cancel'} %>
+			        <input type="submit" class="doneButton" />
+			    </div>
+			    </fieldset>
+			</div>
+		</div>
+		<div class="boardEmail">
+			<div class="userTopemail">
+				<ul>
+			        <li class="name1"><span>Name</span></li>
+			        <li class="emailHead1"><span>Email</span></li>
+			        <li class="edit1"><span></span></li>
+				</ul>
+			</div>
+			<div class="userContentemail" id="userContentemail">
+				<%= render 'list'%>
+			</div>
+			<div class="userBottomemail"></div>
+		</div>
+    	<% end %>
+    	<% end %>
+  </div>
+  <div class="userBottom"></div><!-- end footer-->
+</div><!-- end main-->
+    <!-- end colright -->
+ </div>
+ <div class="clear30"></div>
+ <script language="JavaScript">
+ var row_active = "0";
+ var id_receiver = "<%= params[:id_receiver] %>"
+ $(document).ready(function () {
+ 	$("#update_receiver").validate({
+	  rules: {
+	    name_receiver: {required: true},
+	    email_receiver:{required: true, email: true}
+	  }
+	});
+ });
+function editReceiver(id,name,email){
+	if(row_active != 0){
+		$('#name'+row_active).html('<span>'+name+'</span>');
+		$('#email'+row_active).html(email);
+	}
+	row_active = id;
+	$('#name'+id).html('<input type="text" class="txt_boder" id="name_receiver'+id+'" name="name_receiver" value="'+name+'" ><input type="hidden" name="id_receiver" value="'+id+'" >');
+	$('#name_receiver'+id).focus();
+	$('#email'+id).html('<input type="text" class="txt_boder" id="email_receiver'+id+'" name="email_receiver" value="'+email+'" >');
+}
+ </script>

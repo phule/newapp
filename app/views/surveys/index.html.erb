@@ -1,0 +1,44 @@
+<div class="dashboard">
+     <%=  render 'shared/left_menu'%>
+     <div class="colRight729 fLeft">
+     	<div class="headDashboard">
+        	<ul>
+            	<li class="date1"><span>Date</span></li>
+                <li class="score1"><span>Score</span></li>
+                <li class="percent1"><span>%</span></li>
+                <li class="showDetail1"><span></span></li>
+            </ul>
+        </div><!-- end header-->
+        <div class="mainDashboard">
+        	<% if @surveys %>
+        		<% @surveys.each do |survey| 
+        			num = survey.id
+        		%>
+        		
+        	<div>
+                <ul>
+                    <li class="date"><span><% if survey.date %><%= survey.date  %><%else%>&nbsp;<%end%></span></li>
+                    <li class="score"><span><% if survey.responses %><%= survey.responses %>/<%= survey.num_question %><%else%>0<%end%></span></li>
+                    <li class="percent"><span><% if survey.percent_responses  %><%= survey.percent_responses  %><%else%>&nbsp;<%end%></span></li>
+                    <li class="showDetail"><a style="display: none" class="hideDetail" id="hideDetail<%= survey.id%>" onclick="showDetail(<%= survey.id%>)">Hide</a><%= link_to 'Show Details',survey, {:remote => true, :id=>"showDetail"+num.to_s,:class=>"diplayDetail"} %></li>
+                    
+                </ul>
+            </div>
+            	<% end %>
+            <% end %>
+        </div><!-- end main-->
+        <div class="footerDashboard">
+        	<div class="showResultDetail" id="showResultDetail" style="display: block;">
+            </div>
+        </div><!-- end footer-->
+     </div><!-- end colright -->
+ </div>
+ <script>
+ 	function showDetail(id){
+ 		//$('.diplayDetail').show();
+ 		$('.hideDetail').hide();
+ 		
+ 		$('#showDetail'+id).show();
+ 		$('#showResultDetail').html('');
+ 	}
+ </script>

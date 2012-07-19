@@ -1,0 +1,25 @@
+<%= form_for(@state_signup) do |f| %>
+  <% if @state_signup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@state_signup.errors.count, "error") %> prohibited this state_signup from being saved:</h2>
+
+      <ul>
+      <% @state_signup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.number_field :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

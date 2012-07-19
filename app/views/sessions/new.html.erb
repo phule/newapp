@@ -1,0 +1,53 @@
+<script language="JavaScript">
+$(document).ready(function () {
+	$('#frmSignIn').validate({
+		debug: true,
+		rules: {
+			'session[email]': {required: true, email: true},
+			'session[password]':{required:true},
+			'session[password_confirmation]': {required:true,equalTo: "#session_password"}
+		}
+	});
+});
+function submitForm(){
+	$('#frmSignIn').submit();
+}
+</script>
+
+<% if flash[:error] %>
+  <div id="error_explanation">
+  	<div class="alert alert-error">
+      The form contains 1 error.
+    </div>
+    <ul>
+      <li>* <%= flash[:error] %></li>
+    </ul>
+  </div>
+<% end %>
+<div class="clear25"></div>
+<div class="contentLogin">
+	<div class="bgLogintop">
+    </div><!-- end top Login-->
+    <div class="bgLogincontent">
+    	<div class="pageLogin">
+            	<%= form_for(:session, url: sessions_path,:html=>{:id=>'frmSignIn'}) do |f| %>
+                	<fieldset>
+                        <div class="styleTextboxSignin">
+                            <div>
+                                <label for="email">Email</label>
+                                <%= f.text_field :email, :class => "styleInput" %>
+                                
+                            </div>
+                            <div>
+                                <label for="password">Password</label>
+                                <%= f.password_field :password, :class => "styleInput" %>
+                            </div>
+                           <p><input type="button" value="" class="login" name="login" onclick="submitForm();"/></p>
+                       </div>
+                    </fieldset>
+                <% end %>
+         </div>
+    </div><!-- end content Login-->
+    <div class="bgLoginbottom"></div><!-- end content Login-->
+</div><!--header -->
+<div class="clear25"></div>

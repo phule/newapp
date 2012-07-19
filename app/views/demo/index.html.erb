@@ -1,0 +1,6 @@
+<h1>Demo#index</h1>
+<p>Find me in app/views/demo/index.html.erb</p>
+<%= form_tag '/demos', :multipart => true,:id =>:dump,:name =>:dump do %>
+  <label for="file">File to Upload</label> <%= file_field_tag "excel_file" %>
+  <%= submit_tag %>
+<% end %>

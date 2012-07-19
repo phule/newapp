@@ -1,0 +1,977 @@
+/* =============================================================================
+   FONTS
+   ========================================================================== */
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('myriadpro-regular.eot');
+    src: url('myriadpro-regular.eot?#iefix') format('embedded-opentype'),
+         url('myriadpro-regular.woff') format('woff'),
+         url('myriadpro-regular.ttf') format('truetype'),
+         url('myriadpro-regular.svg#MyriadProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+     font-family: 'MyriadProSemibold';
+    src: url('myriadpro-semibold-webfont.eot');
+    src: url('myriadpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriadpro-semibold-webfont.woff') format('woff'),
+         url('myriadpro-semibold-webfont.ttf') format('truetype'),
+         url('myriadpro-semibold-webfont.svg#MyriadProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MyriadProIt';
+    src: url('myriadpro-it-webfont.eot');
+    src: url('myriadpro-it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriadpro-it-webfont.woff') format('woff'),
+         url('myriadpro-it-webfont.ttf') format('truetype'),
+         url('myriadpro-it-webfont.svg#MyriadProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('myriadpro-bold-webfont.eot');
+    src: url('myriadpro-bold-webfont?#iefix') format('embedded-opentype'),
+         url('myriadpro-bold-webfont.woff') format('woff'),
+         url('myriadpro-bold-webfont.ttf') format('truetype'),
+         url('myriadpro-bold-webfont.svg#MyriadProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HelveticaWorld-Regular';
+    src: url('helveticaworld-regular.eot');
+    src: url('helveticaworld-regular.eot?#iefix') format('embedded-opentype'),
+         url('helveticaworld-regular.woff') format('woff'),
+         url('helveticaworld-regular.ttf') format('truetype'),
+         url('helveticaworld-regular.svg#helveticaworld-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/** reset **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	
+}
+body {
+	line-height: 1;
+	padding: 0; margin: 0
+}
+ol, ul {
+	list-style: none;
+}
+*{
+	padding: 0;
+	margin: 0;
+	outline:none;
+}
+body {
+	color:#000;
+	background: #fff url(bghome.jpg) repeat-x top center;
+	font-family:"MyriadProRegular",Helvetica,Arial,sans-serif;
+}
+a {
+	text-decoration: none;}
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+fieldset {
+	border: 0;}
+form {
+	padding: 0;
+	margin: 0;}
+input{
+	border: 0;}
+ol,ul {
+	list-style: none;}
+.header {
+	position:relative;
+	top: 20px;
+}
+.headerTop {
+	height: 60px;
+	background:url(head.png) no-repeat;
+}
+.headerTop .logo{
+	float: left;
+    left: 15px;
+    position: relative;
+    top: 7px;
+	z-index: 9999;
+	}
+.headerBottom {
+	position: relative;
+    text-align: center;
+    top: -5px;
+}
+.headerBottom h2{
+	color: #434343;
+	font: 26px/20px "MyriadProSemibold",Helvetica,Arial,sans-serif; }
+.menu {
+    margin: 0 auto;
+    position: relative;
+    right: 80px;
+    text-align: center;
+    top: 15px;
+}
+.menu a{
+  color: #434343;
+  font: 12px/30px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+  position: relative;
+    top: 2px;
+}
+.menu a:hover{
+	color: #000;
+}
+.loginForm {
+	float: right;
+    position: relative;
+    right: 20px;
+    top: -38px;
+}
+.username,.password {
+	background: url("user_pass.png") no-repeat;
+    color: #666666;
+    font: italic 12px/28px arial;
+    height: 29px;
+    padding-left: 5px;
+    width: 115px;
+	}
+.enterEmail {
+	 background: url("inputEmail.png") no-repeat;
+    height: 39px;
+    padding-left: 15px;
+    width: 263px;
+	font: 16px/37px "MyriadProIt",Helvetica,Arial,sans-serif;
+	color:#666;
+}
+.footer {
+	border-bottom: 4px solid #e5e5e5;
+	border-top: 4px solid #E5E5E5;}
+.btnLogin {
+	background:url(play.png) no-repeat;
+	text-indent: -9999;
+	width: 41px;
+	height: 42px;
+	cursor: pointer;
+}
+.btnSignup{
+  background: url("btnsignup.png") no-repeat;
+    height: 38px;
+    left: 77px;
+    margin-bottom: -38px;
+    position: absolute;
+    bottom: 0px;
+    width: 123px;
+}
+.done{
+	background: url(done.png) no-repeat;
+	width: 133px;
+	height: 48px;
+	cursor: pointer;
+	margin-left: -4px;
+    margin-top: 4px;
+}
+.login{
+	background: url("login.png") no-repeat;
+    height: 48px;
+    margin-left: -4px;
+    margin-top: 23px;
+    position: relative;
+    top: 17px;
+    width: 133px;
+	left: 163px;
+}
+.clear{
+	clear: both;
+}
+.clear90{
+	clear: both;
+	height: 90px;
+}
+.textFooter {
+	width: 160px;
+}
+.footerTop {
+	height: 80px;
+    padding: 20px 0;}
+.footerBottom {
+	text-align: center;}
+.textFooter p{
+	font: 15px/20px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+	color: #434343;
+}
+.footerMid {
+    position: relative;
+    top: 10px;
+	right: -20px;
+	}
+.footerMid a {
+	margin-right: 8px;
+}
+.footerBottom {
+	text-align: center;
+	margin: 20px 0;}
+.footerBottom h4 { 
+	margin-top: 10px;
+	color: #858585;
+	font: 14px/20px "MyriadProRegular",Helvetica,Arial,sans-serif; }
+.content {
+	background:url(bgblue.png) no-repeat;
+	height: 396px;
+}
+.contentSignup {
+	background: url(Addmin.png) no-repeat;
+	height: 396px;
+	margin-top: 15px;
+}
+.contentLogin {
+	/*background: url(Signup.png) no-repeat;
+	height: 396px;
+	margin-top: 15px;*/
+}
+.colRight {
+	width: 660px;
+	height: 364px;
+	float: left;
+}
+.video {
+	 float: left;
+    left: 50px;
+    position: relative;
+    top: 80px;
+}
+.afterSinging {
+	left: 95px;
+    position: relative;
+    top: 79px;
+    width: 270px;
+	}
+.afterSinging h4 {
+	font: 18px Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-left: -23px;
+	color: #2c2219;
+	margin-bottom: 20px;}
+.afterSinging li {
+	list-style-image:url(iconcheck.png);
+	font: 16px/20px Arial, Helvetica, sans-serif;
+	color: #2c2219;
+	margin-bottom: 13px;}
+.afterSinging span {
+	position: relative;
+	top: -3px;}
+.fLeft {
+	float: left;
+}
+.register {
+	left: 24px;
+    position: relative;
+    top: 75px;
+    width: 300px;}
+.divSetup{
+	background:url(bgsign.png) no-repeat;
+	height: 110px;
+	margin-bottom: 10px;}
+.divSignup {
+  width: 296px;
+}
+.col100,.col100Page {
+	width: 100px;
+	}
+.col100 img {
+	left: 29px;
+    position: relative;
+    top: -5px;}
+.col100 h5, .col100Page h5 {
+	font: 14px/11px "MyriadProBold",Helvetica,Arial,sans-serif;
+	text-align:center;
+	color: #555;
+	 margin-bottom: 5px;
+	 letter-spacing: -0.5px;
+}
+.col100 p, .col100Page p {
+	font: 13px "MyriadProRegular",Helvetica,Arial,sans-serif;
+	text-align:center;
+	color: #555;
+	letter-spacing: -1px;
+}
+.col100Page img {
+	left: 18px;
+    position: relative;
+    top: -5px;
+	}
+.form label{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #2c2219;
+	position: relative;
+    top: 1px;
+}
+.pageSignup {
+	left: 86px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    width: 630px;
+}
+.pageLogin {
+	left: 86px;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    width: 630px;
+}
+.pageSignup p,.pageLogin p {
+	padding-bottom: 6px;}
+.styleInput {
+	background:url(inputAdmin.png) no-repeat;
+	width: 266px;
+	height: 30px;
+	padding-left: 10px;
+}
+.styleLabel {
+	width: 170px;
+	margin-top: 6px;
+}
+.styleLabel p{
+	padding-bottom: 20px;
+	}
+.styleTextbox {
+	width: 290px;
+}
+.styleTextboxSignin {
+  width: 630px;
+}
+.form{
+	left: 9px;
+    position: relative;
+    top: 0;
+}
+.form p {
+	margin-bottom: 4px;}
+.clear30 {
+	clear:both;
+	height: 30px;}
+.colLeft251 {
+	width: 251px;
+	margin-right: 20px;
+	background:url(bgcolleft.png) no-repeat;
+	height: 229px;
+}
+.hoverLink1 {
+	position:relative; 
+	left:0px !important;
+} 
+.hoverLink1 a{
+	 position: relative;
+	 top:5px !important;
+}
+.colLeft251 div a{
+	color: #5A5A5A;
+    font: 16px "HelveticaWorld-Regular",Helvetica,Arial,sans-serif;
+    height: 45px;
+    position: relative;
+	left: 17px;
+}
+.colLeft251 div a:hover{
+	color:#fff;
+	text-shadow: 0px 1px #555;
+}
+
+.colLeft251 div span {
+	color: #5A5A5A;
+    font: 16px "HelveticaWorld-Regular",Helvetica,Arial,sans-serif;
+    height: 45px;
+    position: relative;
+	left: 17px;
+	top: 7px;
+}
+/*.colLeft251 div:first-child {
+	background:url(header.png) no-repeat;
+	width: 251px;
+	height: 46px;
+	left: 0;
+    position: relative;
+}*/
+
+.colLeft251 .headTop:hover {
+  background:url(header.png) no-repeat;
+}
+.activeHeader {
+  background:url(header.png) no-repeat;
+  width: 251px;
+  height: 46px;
+  left: 0!important;
+  position: relative;
+}
+.colLeft251 div{
+	width: 250px;
+	height: 45px;
+	position:relative;
+	left: 1px;
+	
+}
+.borderBottom{
+	border-bottom: 1px solid #cccccc;
+	}
+.hoverLinkBackground{
+	background:url(bgYellow.png) no-repeat;
+}
+.hoverLink:hover{
+	background:url(bgYellow.png) no-repeat;
+}
+.activeContent{
+  background:url(bgYellow.png) no-repeat;
+}
+
+.activeBottom{
+	background:url(foooter.png) no-repeat;
+}
+.footerLink:hover{
+  background:url(foooter.png) no-repeat;
+}
+.colLeft251 a {
+	color: #5a5a5a;
+    position: relative;
+    top: 7px;
+	}
+.colRight729{
+	width: 729px;
+}
+
+.headDashboard{
+	background:url(hdardboard.png) no-repeat;
+	width: 729px;
+	height: 42px;
+}
+.userTop{
+	background:url(bgUsertop.png) no-repeat;
+	width: 729px;
+	height: 10px;
+}
+.headDashboard li {
+	float: left;
+	font: 18px/45px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+	color: #3e3e3e;
+}
+.mainDashboard li{
+	font:16px/34px "MyriadProRegular",Helvetica,Arial,sans-serif;
+}
+.mainDashboard h4{
+	font:18px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+	color: #5a5a5a;
+	padding-left: 15px;
+    padding-top: 5px;
+	padding-bottom: 20px;
+}
+.mainDashboard h4 span{
+	font:18px "MyriadProRegular",Helvetica,Arial,sans-serif;
+	color:#5a5a5a;
+}
+.headDashboard li:first-child span,.mainDashboard li:first-child span{
+	margin-left: 15px;}
+.mainDashboard li{
+	float:left;
+}
+.mainDashboard { 
+	background:url(dardboard.png) repeat-y;
+ 	width: 729px;
+}
+.mainDashboard div{
+	height: 34px;
+	width: 727px;
+	position:relative;
+	left: 1px;
+}
+.mainDashboard div:nth-child(even){
+	background:#e9fbfd;
+}
+.footerDashboard {
+	background:url(fdardboard.png) no-repeat;
+	width: 729px;
+	height: 224px;
+	padding: 12px;
+}
+.userContent {
+	background:url(dardboard.png) repeat-y;
+ 	width: 729px;
+ 	min-height: 75px;
+}
+.userBottom{
+	background:url(bgUserbottm.png) no-repeat;
+	width: 729px;
+	height: 18px;
+}
+.date1 {
+	left: 1px;
+    position: relative;
+    width: 243px;
+}
+.score1 {
+	width: 182px;
+	left: 2px;
+	position: relative;
+	text-align:center;
+}
+.percent1 {
+	width: 182px;
+	left: 3px;
+	position: relative;
+	text-align:center;
+	
+}
+.showDetail {
+	width: 116px;
+	left: 4px;
+	position: relative;
+	text-align:center;
+}
+.date {
+	left: 1px;
+    position: relative;
+    top: -3px;
+    width: 242px;
+	border-right: 1px solid #CCCCCC;
+	color: #0080cf;
+}
+.score {
+	width: 181px;
+	left: 2px;
+	text-align:center;
+	border-right: 1px solid #CCCCCC;
+	position: relative;
+    top: -3px;
+}
+.percent {
+	width: 181px;
+	left: 3px;
+	position: relative;
+	text-align:center;
+	border-right: 1px solid #CCCCCC;
+	position: relative;
+    top: -3px;
+	
+}
+.showDetail {
+	width: 115px;
+	left: 4px;
+	position: relative;
+	text-align:center;
+	border-right: 1px solid #CCCCCC;
+	position: relative;
+    top: -3px;
+}
+.showDetail a{
+	color:#0080cf;
+}
+.showDetail a:hover{
+	border-bottom:1px dotted #0080cf;
+}
+.showResultDetail {
+	background: url(bgdardboard.png) no-repeat;
+	width: 703px;
+	height: 198px;
+	padding: 15px;
+}
+.showResultDetail p{
+	font:16px/28px "MyriadProRegular",Helvetica,Arial,sans-serif;
+	color: #000;
+ }
+.dashboard {
+	 margin-top: 30px;
+}
+.userContent li{
+	font:16px/34px "MyriadProRegular",Helvetica,Arial,sans-serif;
+}
+.userContent h4{
+	font:18px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+	color: #5a5a5a;
+	padding-left: 15px;
+    padding-top: 5px;
+	padding-bottom: 15px;
+}
+.userContent h4 span{
+	font:18px "MyriadProRegular",Helvetica,Arial,sans-serif;
+	color:#5a5a5a;
+}
+.userContent li:first-child span{
+	margin-left: 15px;}
+.userContent li{
+	float:left;
+}
+.userContent .emalEnter{
+	padding-left: 12px;
+    padding-right: 12px;
+	width: 727px;
+	position:relative;
+	left: 1px;
+}
+.userContent .emailEnter1{
+	
+    left: 1px;
+    margin-left: 12px;
+    margin-right: 12px;
+    position: relative;
+    width: 703px;
+}
+.borderBottom1{
+	border-bottom: 1px solid #E5E5E5;
+}
+.emailEnter1 p{
+	font:16px/34px "MyriadProRegular",Helvetica,Arial,sans-serif;
+	color: #5a5a5a;
+	padding-bottom: 5px;
+    padding-top: 10px;
+}
+.email {
+  position: relative;
+  right: -20px;
+}
+.email,.textName{
+  font: 16px/37px "MyriadProIt",Helvetica,Arial,sans-serif;
+  background: url("email_name.png") no-repeat ;
+    height: 37px;
+    margin-right: 8px;
+    padding-left: 12px;
+    width: 273px;
+  color: #5a5a5a;
+}
+.textName {
+  margin-right:10px;
+}
+.add {
+	background:url(btnAdd.png) no-repeat;
+	width: 90px;
+	height: 37px;
+	cursor: pointer;
+}
+.inputEmail {
+	width: 590px;
+	padding-right: 23px;
+	margin-top: 3px;
+}
+.addButton {
+	position: relative;
+    right: -615px;
+    top: -37px;
+    width: 90px;
+}
+.groupButton {
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 12px;
+	padding-bottom: 20px;
+}
+.cancel {
+	background:url(btn.png) no-repeat;
+	width: 90px;
+	height: 37px;
+	margin-right: 10px;
+	display: block;
+  float: left;
+}
+.doneButton{
+	background:url(btnDone.png) no-repeat;
+	width: 90px;
+	height: 37px;
+	cursor: pointer;
+  text-indent: -9999px;
+}
+input[type="button"]{
+	cursor: pointer;
+}
+input[type="button"]:hover{
+	opacity: 0.8;
+}
+.userTopemail {
+	background:url(emailTop.png) no-repeat;
+	width: 707px;
+	height: 40px;
+}
+.userContentemail {
+	position: relative;
+    width: 707px;
+    z-index: 9;
+}
+.userBottomemail {
+	background:url(emailBottom.png) no-repeat;
+	width: 707px;
+	height: 34px;
+	position:relative;
+	z-index: 8;
+	top: -29px;
+}
+.boardEmail {
+	padding: 0px 10px;
+}
+.boardEmail .userTopemail li{
+	float: left;
+	font: 18px/40px "MyriadProSemibold",Helvetica,Arial,sans-serif;
+	color: #3e3e3e;
+}
+.userContentemail li{
+	float:left;
+}
+.userContentemail div{
+	height: auto;
+    width: 707px;
+}
+.name {
+	left: 1px;
+  position: relative;
+  width: 241px;
+  height: auto;
+}
+.name span{
+	color: #5a5a5a;
+	font:16px/34px "MyriadProRegular",Helvetica,Arial,sans-serif;}
+.emailHead {
+	height: auto;
+    left: 1px;
+    padding-left: 17px;
+    position: relative;
+    width: 350px;
+}
+.emailHead span {
+	margin-left: 30px;
+	
+}
+.emailHead a {
+	margin-left: 30px;
+	color: #0080cf;
+}
+.emailHead a:hover {
+	border-bottom: 1px dotted #0080cf;
+}
+.edit {
+	height: auto;
+    left: 3px;
+    position: relative;
+    width: 95px;
+	}
+.name1 {
+	left: 1px;
+	position: relative;
+	width: 242px;
+}
+.emailHead1 {
+	left: 2px;
+	position: relative;
+	width: 365px;
+	text-align:center;
+}
+.edit1 {
+	left: 3px;
+	position: relative;
+	width: 96px;
+}
+.userContentemail div:nth-child(even){
+	background: url("bluebg.png") repeat-y;
+    height: auto;
+    width: 707px;
+}
+.editEmail {
+	background: url("pen.png") no-repeat ;
+    display: block;
+    height: 16px;
+    position: relative;
+    top: 10px;
+    width: 16px;
+}
+.remove {
+	background: url("delete.png") no-repeat;
+    display: block;
+    height: 15px;
+    position: relative;
+    top: 9px;
+    width: 14px;
+}
+.edit .form{
+	 margin: 0 auto;
+    position: relative;
+    top: -7px;
+    width: 51px;
+}
+.edit .form .divEmail {
+	float: left;
+	 padding-right: 10px;
+	  padding-top: 6px;
+	  width: 16px;
+}
+.edit .form .divRemove {
+	float: left;
+	height: 0;
+	position: relative;
+	top: 8px;
+	 width: 14px;
+}
+.topLogin {
+	position: relative;
+    right: 4px;
+    top: 7px;
+}
+.pb30{
+	padding-bottom: 20px;
+}
+.positionGroupbutton{
+	position: relative;
+    right: -258px;
+}
+.clear211 {
+	height: 211px;
+	clear: both;
+}
+.bgLogintop {
+	background: url(headTop.png) no-repeat;
+	width: 1001px;
+	height: 105px;
+}
+.bgLogincontent {
+	background: url(mainContent.png) repeat-y;
+	width: 1001px;
+}
+.bgLoginbottom {
+	background: url(footerBottom.png) no-repeat;
+	width: 1001px;
+	height: 59px;
+}
+.clear25 {
+	clear: both;
+	height: 25px;}
+.styleTextboxSignin div {
+	padding-bottom: 6px;
+	width: 450px;
+}
+.styleTextboxSignin label[for="email"]{
+	padding-right: 123px;
+	font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+.styleTextboxSignin label[for="full name"]{
+	padding-right: 93px;
+	font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+.styleTextboxSignin label[for="password"]{
+	padding-right: 94px;
+	font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+.styleTextboxSignin label[for="confirm password"]{
+	padding-right: 40px;
+	font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+.error {
+  color: red !important;
+  padding-left: 10px;
+}
+.fieldsetTop {
+  background:url(fieldsetTop.png) no-repeat;
+  height: 10px;
+  width: 296px;
+}
+.fieldsetContent {
+  background:url(fieldsetContent.png) repeat-y;
+  width: 296px;
+}
+.fieldsetBottom{
+  background:url(fieldsetBottom.png) no-repeat;
+  height: 20px;
+  width: 296px;
+}
+.txt_boder{
+  border: 1px solid #CCCCCC;
+  margin-left: 7px;
+  padding-left: 8px;
+  width: 215px;
+  margin-right: 100px;
+}
+.menu p{
+  font-size: 9px;
+  position:relative;
+  top:-2px;
+  padding-right: 15px;
+}
+
+.contentCongratulation {
+  background:url(bg-congralations.png) no-repeat;
+  height: 396px;
+  margin-top: 15px;
+}
+.contentThankyou{
+  background:url(bg-thanks.png) no-repeat;
+  height: 396px;
+  margin-top: 15px;
+}
+.pageContent {
+  margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 80px;
+    width: 625px;
+}
+.pageContentThankyou{
+  margin: 0 auto;
+    position: relative;
+    top: 80px;
+    width: 625px;
+}
+.pageContentThankyou p {
+  line-height: 30px;
+    padding: 40px 10px 45px 31px;
+    word-spacing: 4px;
+}
+.pageContent p {
+  padding-bottom: 45px;
+  padding-top: 40px;
+}
+.btnPlease {
+  background: url("btn-thanks.png") no-repeat;
+    display: block;
+    height: 48px;
+    left: 222px;
+    position: relative;
+    width: 200px;
+}
+.borderRight{
+  border-right: 1px solid #CCCCCC;
+}
+.borderLeft{
+  border-left: 1px solid #CCCCCC;
+}
+.contentDiv {
+  background:url(divEmail.png) repeat-y;
+  width: 707px;
+}
+#successMessage{
+  background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid green;
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+    width: 999px;
+}

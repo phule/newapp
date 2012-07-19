@@ -1,0 +1,14 @@
+<%= form_for(@receiver) do |f| %>
+  <div class="inputEmail fLeft">
+  	<fieldset>
+  		<div class="inputEmail fLeft">
+		    <%= f.text_field :name,:class=>"textName fLeft",:placeholder => 'Name' %>
+		    <%= f.text_field :email,:class=>"email",:placeholder => 'Email' %>
+    	</div>
+    </fieldset>
+  <div class="addButton fLeft">
+    <%= f.submit "", :class => 'add' %>
+  </div>
+  
+ </div>
+<% end %>
